@@ -12,7 +12,7 @@ const eqArrays = (arrOne, arrTwo) => {
   return result;
 };
 
-const assertArraysEqaul = (actual, expected) => {
+const assertArraysEqual = (actual, expected) => {
   console.log(
     eqArrays(actual, expected)
       ? `✅✅✅Assertion Passed: ${actual} === ${expected}`
