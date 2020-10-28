@@ -12,17 +12,14 @@ const assertEqual = (actual, expected) => {
 };
 
 const eqArrays = (arrOne, arrTwo) => {
-  let result = true;
+  if (arrOne.length !== arrTwo.length) return false;
 
   for (let i = 0; i < arrOne.length; i++) {
     if (arrOne[i] !== arrTwo[i]) {
-      result = false;
-      return result;
-    } else {
-      result = true;
+      return false;
     }
   }
-  return result;
+  return true;
 };
 
 console.log(eqArrays([1, 2, 3], [1, 2, 3])); // => true
