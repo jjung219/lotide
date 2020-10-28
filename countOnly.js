@@ -6,27 +6,19 @@ const assertEqual = (actual, expected) => {
   }
 };
 
-const createObject = (allItems, itemsToCount) => {
-  let itemsWithTruthyValues = {};
-
-  for (const itemToCount in itemsToCount) {
-    if (itemsToCount[itemToCount] && allItems.includes(itemToCount)) {
-      itemsWithTruthyValues[itemToCount] = 0;
-    }
-  }
-
-  return itemsWithTruthyValues;
-};
-
 const countOnly = (allItems, itemsToCount) => {
-  let finalObject = createObject(allItems, itemsToCount);
+  let result = {};
 
   for (const item of allItems) {
     if (itemsToCount[item]) {
-      finalObject[item] += 1;
+      if (result[item]) {
+        result[item] += 1;
+      } else {
+        result[item] = 1;
+      }
     }
   }
-  return finalObject;
+  return result;
 };
 
 //TEST
