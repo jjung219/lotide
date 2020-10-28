@@ -18,8 +18,7 @@ const createObject = (allItems, itemsToCount) => {
   return itemsWithTruthyValues;
 };
 
-const countOnly = function (allItems, itemsToCount) {
-  // Object with truthy values and with itmes that match the allItems
+const countOnly = (allItems, itemsToCount) => {
   let finalObject = createObject(allItems, itemsToCount);
 
   for (const item of allItems) {
