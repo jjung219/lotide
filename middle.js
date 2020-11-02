@@ -1,25 +1,3 @@
-const eqArrays = (arrOne, arrTwo) => {
-  let result = true;
-
-  for (let i = 0; i < arrOne.length; i++) {
-    if (arrOne[i] !== arrTwo[i]) {
-      result = false;
-      return result;
-    } else {
-      result = true;
-    }
-  }
-  return result;
-};
-
-const assertArraysEqual = (actual, expected) => {
-  console.log(
-    eqArrays(actual, expected)
-      ? `✅✅✅Assertion Passed: ${actual} === ${expected}`
-      : `🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`
-  );
-};
-
 // Get the length of the array
 // if the array's length is less than or equal to 2, return empty array
 // if the length of the array is divisible by 2
@@ -45,16 +23,5 @@ const middle = (arr) => {
   return middleElements;
 };
 
-//TEST
-console.log(middle([1])); // => []
-console.log(middle([1, 2])); // => []
+module.exports = middle;
 
-console.log(middle([1, 2, 3])); // => [2]
-console.log(middle([1, 2, 3, 4, 5])); // => [3]
-
-console.log(middle([1, 2, 3, 4])); // => [2, 3]
-console.log(middle([1, 2, 3, 4, 5, 6])); // => [3, 4]
-
-assertArraysEqual(middle([1]), []);
-assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
-assertArraysEqual(middle([1, 2, 3]), [2]);
