@@ -46,3 +46,5 @@ assertArraysEqual(gibberish, [
 const numbers = [1, 4, 8, 3, 6];
 const timesTwo = map(numbers, (num) => num * 2);
 assertArraysEqual(timesTwo, [2, 8, 16, 6, 12]);
+
+module.exports = map;
